@@ -1,23 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import List from "./components/List";
-import ListItem from "./components/ListItem";
+import { getTodos } from "./api/getTodos";
 
 function TodoList() {
+  const [todos, setTodos] = useState(null);
+
+  useEffect(() => {
+    const doFetch = async () => {
+      const toDos = await getTodos();
+      setTodos(toDos);
+    };
+    doFetch();
+  }, []);
+
   return (
-    <div className="app">
-      <header>
-        To Dos <input />
-      </header>
-      <main>
-        <List>
-          <ListItem>"Task 1"</ListItem>
-          <ListItem>"Task 2"</ListItem>
-          <ListItem>"Task 3"</ListItem>
-          <ListItem>"Task 4"</ListItem>
-          <ListItem>"Task 5"</ListItem>
-        </List>
-      </main>
+    <div className="App">
+      {todos?.map((todo) => (
+        <div key={todo.id}>{todo.task}</div>
+      ))}
     </div>
   );
 }
