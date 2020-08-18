@@ -14,5 +14,6 @@
 
 .app > main {
   padding: 10px;
-  background: var(--bg-color);
+  background: pink;
 }
+

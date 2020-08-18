@@ -9,19 +9,15 @@ function TodoList() {
       <header>
         To Dos <input />
       </header>
-      <main>To Dos</main>
-      <List>
-        <ListItem href="Task 1"></ListItem>
-        <ListItem href="Task 2"></ListItem>
-        <ListItem href="Task 3"></ListItem>
-        <ListItem href="Task 4"></ListItem>
-        <ListItem href="Task 5"></ListItem>
-        <ListItem href="Task 6"></ListItem>
-        <ListItem href="Task 7"></ListItem>
-        <ListItem href="Task 8"></ListItem>
-        <ListItem href="Task 9"></ListItem>
-        <ListItem href="Task 10"></ListItem>
-      </List>
+      <main>
+        <List>
+          <ListItem>"Task 1"</ListItem>
+          <ListItem>"Task 2"</ListItem>
+          <ListItem>"Task 3"</ListItem>
+          <ListItem>"Task 4"</ListItem>
+          <ListItem>"Task 5"</ListItem>
+        </List>
+      </main>
     </div>
   );
 }
