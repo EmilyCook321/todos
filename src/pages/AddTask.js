@@ -19,18 +19,6 @@ function AddTask() {
     setPriority(event.target.value);
   }
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const todo = {
-      task,
-      author,
-      priority,
-    };
-    await postTodo(todo);
-    setTask("");
-    setAuthor("");
-    setPriority("");
-  }
   //     alert("Submitted + task + author + priority");
   //   }
 
