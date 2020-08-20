@@ -1,0 +1,53 @@
+{
+  "todos": [
+    {
+      "task": "Feed the dog",
+      "id": "1"
+    },
+    {
+      "task": "Buy more chocolate",
+      "id": "2"
+    },
+    {
+      "task": "Visit grandma",
+      "id": "3"
+    },
+    {
+      "task": "Put the kettle on",
+      "id": "4"
+    },
+    {
+      "task": "",
+      "id": "5"
+    },
+    {
+      "task": "",
+      "id": "6"
+    },
+    {
+      "task": "",
+      "id": "7"
+    },
+    {
+      "task": "",
+      "id": "8"
+    },
+    {
+      "task": "",
+      "id": "9"
+    },
+    {
+      "task": "Buy a puppy",
+      "author": "Emily",
+      "priority": "High",
+      "createdAt": 1597945330617,
+      "id": "-xUBvRB"
+    },
+    {
+      "task": "Call my sister",
+      "author": "Emily",
+      "createdAt": 1597945805424,
+      "id": "2qMVa4K"
+    }
+  ]
+}
