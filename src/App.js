@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AddTask from "./pages/AddTask";
 
-function TodoList() {
+function App() {
   return (
     // <div className="App">
     //   {todos?.map((todo) => (
@@ -16,9 +16,12 @@ function TodoList() {
         <Route path="/add">
           <AddTask />
         </Route>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );
 }
 
-export default TodoList;
+export default App;

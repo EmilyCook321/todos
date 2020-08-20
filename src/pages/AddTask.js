@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { postTodo } from "../api/getTodos";
 
 function AddTask() {
   const [task, setTask] = useState("");
@@ -17,9 +18,35 @@ function AddTask() {
   function handlePriorityChange(event) {
     setPriority(event.target.value);
   }
-  function handleSubmit(event) {
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    alert("Submitted + task + author + priority");
+    const todo = {
+      task,
+      author,
+      priority,
+    };
+    await postTodo(todo);
+    setTask("");
+    setAuthor("");
+    setPriority("");
+  }
+  //     alert("Submitted + task + author + priority");
+  //   }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const todo = {
+      task,
+      author,
+      priority,
+      createdAt: Date.now(),
+    };
+
+    await postTodo(todo);
+    setTask("");
+    setAuthor("");
+    setPriority("");
   }
 
   return (
