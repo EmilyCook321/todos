@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import { getTodos } from "../api/getTodos";
 import { Link } from "react-router-dom";
 
-
 function Home() {
   const [todos, setTodos] = useState(null);
+  const doFetch = async () => {
+    const todos = await getTodos();
+    setTodos(todos);
+  };
 
   useEffect(() => {
-    const doFetch = async () => {
-      const todos = await getTodos();
-      setTodos(todos);
-    };
     doFetch();
   }, []);
 
@@ -18,8 +17,9 @@ function Home() {
     <div>
       <Link to="/add">Add Task</Link>
       {todos?.map((todo) => (
-        <div key={todo.id}>{todo.title}</div>
-      
+        <div key={todo.id}>
+          {todo.task}, {todo.author},{todo.priority}
+        </div>
       ))}
     </div>
   );

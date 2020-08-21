@@ -27,6 +27,7 @@ function AddTask() {
     const todo = {
       task,
       author,
+      priority,
       createdAt: Date.now(),
     };
 
