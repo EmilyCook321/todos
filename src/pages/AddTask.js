@@ -28,13 +28,13 @@ function AddTask() {
       task,
       author,
       priority,
-      createdAt: Date.now(),
     };
 
     try {
       await postTodo(todo);
       setTask("");
       setAuthor("");
+      setPriority("");
     } catch (error) {
       console.error(error);
       setError(true);
@@ -47,7 +47,7 @@ function AddTask() {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          Title:
+          Task:
           <input value={task} onChange={handleTaskChange} />
         </label>
         <label>
@@ -62,7 +62,7 @@ function AddTask() {
         <input
           type="submit"
           value="Add task"
-          disabled={!task || !author || loading}
+          disabled={!task || !author || !priority || loading}
         />
         {error && <p>Oh no! Something went wrong! Please try again.</p>}
       </form>

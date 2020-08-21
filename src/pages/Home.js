@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useAsync from "../hooks/useAsync";
 
 function Home() {
-  const { data: todos, loading, error } = useAsync(getTodos);
+  const { data: todos, error, loading } = useAsync(getTodos);
 
   return (
     <div>
@@ -12,7 +12,9 @@ function Home() {
       {error && <div>ERROR!</div>}
       {loading && <div>Loading...</div>}
       {todos?.map((todo) => (
-        <div key={todo.id}>{todo.title}</div>
+        <div key={todo.id}>
+          {todo.task} - {todo.author} - {todo.priority}
+        </div>
       ))}
     </div>
   );

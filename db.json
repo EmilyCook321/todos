@@ -1,3 +1,22 @@
 {
-  "todos": [{}, {}, {}]
+  "todos": [
+    {
+      "id": 1,
+      "task": "Clean the car",
+      "author": "Emily",
+      "priority": "low"
+    },
+    {
+      "task": "buy prosecco",
+      "author": "Em",
+      "priority": "Medium",
+      "id": 2
+    },
+    {
+      "task": "Visit grandma",
+      "author": "Catherine",
+      "priority": "High",
+      "id": 3
+    }
+  ]
 }
