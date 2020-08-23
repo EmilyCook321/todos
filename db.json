@@ -4,19 +4,22 @@
       "id": 1,
       "task": "Clean the car",
       "author": "Emily",
-      "priority": "low"
+      "priority": "low",
+      "complete": "false"
     },
     {
       "task": "buy prosecco",
       "author": "Em",
       "priority": "Medium",
-      "id": 2
+      "id": 2,
+      "complete": "false"
     },
     {
       "task": "Visit grandma",
       "author": "Catherine",
       "priority": "High",
-      "id": 3
+      "id": 3,
+      "complete": "false"
     }
   ]
 }
