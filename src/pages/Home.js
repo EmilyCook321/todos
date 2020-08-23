@@ -14,7 +14,7 @@ function Home() {
       {loading && <div>Loading...</div>}
       {todos?.map((todo) => (
         <div key={todo.id}>
-          <Todo todo={todo} />
+          <Todo key={todo.id} todo={todo} />
         </div>
       ))}
     </div>
