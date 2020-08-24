@@ -2,10 +2,10 @@ import React from "react";
 import { getTodos } from "../api/getTodos";
 import { Link } from "react-router-dom";
 import useAsync from "../hooks/useAsync";
-import Todo from "../components/Todo";
+import Todo from "../components/ToDo";
 
 function Home() {
-  const { data: todos, error, loading } = useAsync(getTodos);
+  const { data: todos, loading, error } = useAsync(getTodos);
 
   return (
     <div>
@@ -13,9 +13,7 @@ function Home() {
       {error && <div>ERROR!</div>}
       {loading && <div>Loading...</div>}
       {todos?.map((todo) => (
-        <div key={todo.id}>
-          <Todo key={todo.id} todo={todo} />
-        </div>
+        <Todo key={todo.id} todo={todo} />
       ))}
     </div>
   );

@@ -20,6 +20,12 @@
       "priority": "High",
       "id": 3,
       "complete": "false"
+    },
+    {
+      "task": "Buy chocolate",
+      "author": "Em",
+      "priority": "Medium",
+      "id": 4
     }
   ]
 }
