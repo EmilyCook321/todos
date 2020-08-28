@@ -21,7 +21,8 @@ function useAsync(asyncFunction) {
     };
     doFetch();
   }, [asyncFunction]);
-  return { data, loading, error };
+
+  return { data, loading };
 }
 
 export default useAsync;
